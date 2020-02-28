@@ -1,0 +1,33 @@
+{
+    "name": "control-hotels",
+    "version": "1.0.0",
+    "description": "Mange hotels",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon src/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LucasSolares/control-hotel.git"
+    },
+    "author": "@LucasSoalres",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/LucasSolares/control-hotel/issues"
+    },
+    "homepage": "https://github.com/LucasSolares/control-hotel#readme",
+    "dependencies": {
+        "bcrypt": "^4.0.0",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.9.2",
+        "nanoid": "^2.1.11",
+        "pdfkit": "^0.11.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.2"
+    }
+}
