@@ -9,13 +9,6 @@ dotenv.config()
 const config = require('./config')
 const routes = require('./network/routes')
 
-const app = express()
-app.use(express.static(path.resolve(config.PUBLIC_DIRECTORY)))
-app.use(cors())
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
-routes.generateRoutes(app)
-
 async function connectMongo() {
 
     try {
@@ -43,7 +36,12 @@ async function connectMongo() {
 }
 
 function initializeExpress() {
-
+    const app = express()
+    app.use(express.static(path.resolve(config.PUBLIC_DIRECTORY)))
+    app.use(cors())
+    app.use(bodyParser.urlencoded({ extended: true }))
+    app.use(bodyParser.json())
+    routes.generateRoutes(app)
     app.listen(config.PORT, () => console.log(`The server is listen on http://${config.HOST}:${config.PORT}`))
 
 }
